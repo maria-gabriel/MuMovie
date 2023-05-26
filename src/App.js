@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import 'bulma/css/bulma.css';
+import { Title } from "./components/Title";
+import { SearchForm } from "./components/SearchForm";
+import { MoviesList } from './components/MoviesList';
+
+class App extends Component {
+  state = { results : [] }
+
+  _handleResults = (results) => {
+    this.setState({ results })
+  }
+
+  render() {
+    return (
+      <div className="App">
+          <Title>Mu Movie</Title>
+          <div className="SearchForm-wraper">
+          <SearchForm onResults={this._handleResults}/>
+          </div>
+          { this.state.results.length == 0
+            ? 
+            <>
+            <div className="Results-wrapper">
+            <p className="SearchMns tag is-danger is-light">No se encontraron resultados.</p>
+            </div>
+            </>
+            : 
+            <>
+            <div className="Results-wrapper">
+            <p className="SearchMns tag is-info is-light">Se encontraron {this.state.results.length} resultados.</p>
+            <div class="columns">
+            <MoviesList movies={this.state.results} />
+            </div>
+            </div>
+            </>
+          }
+      </div>
+    )
+  }
 }
 
 export default App;
