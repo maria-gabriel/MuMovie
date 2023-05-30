@@ -13,7 +13,7 @@ export class SearchForm extends Component {
     _handleSubmit = (e) =>{
         e.preventDefault()
         const inputMovie = this.state.inputMovie
-        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${inputMovie}`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${inputMovie}`)
         .then(res => res.json())
         .then(results => {
             const {Search = [], totalResults = "0"} = results
@@ -32,12 +32,12 @@ export class SearchForm extends Component {
                     onChange={this._handleChange}
                     className="input" 
                     type="text" 
-                    placeholder="Find a repository"
+                    required
                     />
                 </div>
                 <div className="control">
-                    <button className="button is-info">
-                        Search
+                    <button className="button is-dark">
+                        Buscar
                     </button>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 .App {
-  padding-top: 30px;
+  padding-top: 0px;
   text-align: center;
+
 }
 
 .SearchForm-wraper{
@@ -9,17 +10,49 @@
 }
 
 .Results-wrapper{
-  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.notification{
+  width: 30% !important;
+
+}
+
+.card{
+  min-height: 550px !important;
+  min-width: 29% !important;
+}
+.ghost-container{
+  background-color: ghostwhite;
+}
+
+.dark-container{
+  background-color: #00d1b2;
+}
+
+.is-50{
+  width: 50%;
+}
+
+.is-multiline{
+  width: 100% !important;
+}
+
+.blue-container{
+  background-color: ghostwhite;
+  color: #296fa8 !important;
 }
 
 .MoviesList{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px;
+  padding: 20px;
 }
 
 .MoviesList-item{
-  margin-bottom: 20px;
-  width: 48%;
+  margin-bottom: 25px;
+  width: 29%;
 }

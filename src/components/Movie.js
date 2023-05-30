@@ -12,21 +12,16 @@ export class Movie extends Component {
 
   render() {
     const { id, poster, title, year } = this.props;
-
+    
     return (
-        <Link to={`/detail/${id}`} className="card">
+        <Link to={`/detail/${id}`} className="card box is-light">
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src={poster} alt={title} />
+              <img src={poster != 'N/A' ? poster : 'https://dummyimage.com/400x550/000/e8e8e8.jpg&text=undefined'} alt={title} />
             </figure>
           </div>
           <div className="card-content">
             <div className="media">
-              {/* <div className="media-left">
-                <figure className="image">
-                  <img src={poster} alt={title} />
-                </figure>
-              </div> */}
               <div className="media-content">
                 <p className="title is-4">{title}</p>
                 <p className="subtitle is-6">{year}</p>
