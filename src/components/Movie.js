@@ -17,7 +17,7 @@ export class Movie extends Component {
         <Link to={`/detail/${id}`} className="card box is-light">
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src={poster != 'N/A' ? poster : 'https://dummyimage.com/400x550/000/e8e8e8.jpg&text=undefined'} alt={title} />
+              <img src={poster !== 'N/A' ? poster : 'https://dummyimage.com/400x550/000/e8e8e8.jpg&text=undefined'} alt={title} />
             </figure>
           </div>
           <div className="card-content">

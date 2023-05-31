@@ -12,16 +12,14 @@ export class Home extends Component {
   _renderResults = () => {
     return this.state.results.length === 0 ? (
       <>
-        <div className="Results-wrapper ghost-container">
-          <p className="SearchMns tag is-danger">
+        <div className="notification is-danger is-light">
             No se encontraron resultados.
-          </p>
         </div>
       </>
     ) : (
       <>
-        <div className="Results-wrapper ghost-container">
-          <span className="tag is-primary">Se encontraron {this.state.results.length} películas que se relacionan con tu búsqueda </span>
+          <div className="notification is-success is-light">
+            Se encontraron {this.state.results.length} películas que se relacionan con tu búsqueda
           </div>
           <div className="MoviesList ghost-container">
             <MoviesList movies={this.state.results} />
@@ -41,12 +39,9 @@ export class Home extends Component {
           this._renderResults()
         ) : (
           <>
-            <div className="Results-wrapper my-2">
               <div className="notification is-info is-light">
-                Ingresa tu película y presiona{" "}
-                <strong>Buscar</strong> para hacer la busqueda.
+                Ingresa el nombre y presiona <strong>Buscar</strong> para iniciar tu búsqueda :)
               </div>
-            </div>
           </>
         )}
       </div>

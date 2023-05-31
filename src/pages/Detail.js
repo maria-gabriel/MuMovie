@@ -37,11 +37,11 @@ export class Detail extends Component {
     console.log(this.state.movie);
     return (
       <div>
-        <div className="Results-wrapper ghost-container">
+        <div className="ghost-container py-4">
           <Back />
         </div>
-        <div className="Results-wrapper my-4">
-          <div className="box is-50">
+        <div className="box-container">
+          <div className="box">
             <article className="media">
               <div className="media-left">
                 <figure className="image">
@@ -76,7 +76,7 @@ export class Detail extends Component {
               </div>
             </article>
           </div>
-        </div>
+          </div>
       </div>
     );
   }

@@ -4,55 +4,68 @@
 
 }
 
-.SearchForm-wraper{
+.SearchForm-wraper {
   display: flex;
   justify-content: center;
 }
 
-.Results-wrapper{
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.notification{
-  width: 30% !important;
+.notification {
+  margin-bottom: 0px !important;
 
 }
 
-.card{
+.card {
   min-height: 550px !important;
-  min-width: 29% !important;
 }
-.ghost-container{
+
+.ghost-container {
   background-color: ghostwhite;
 }
 
-.dark-container{
-  background-color: #00d1b2;
+.box-container .image{
+  width: 80px;
 }
 
-.is-50{
-  width: 50%;
+@media screen and (min-width: 1024px) {
+  .box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .box-container .image{
+    width: 100% !important;
+  }
+
+  .box-container .box {
+    width: 60%;
+  }
 }
 
-.is-multiline{
-  width: 100% !important;
-}
-
-.blue-container{
+.blue-container {
   background-color: ghostwhite;
   color: #296fa8 !important;
 }
 
-.MoviesList{
+.MoviesList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 30px 10px 30px;
 }
 
-.MoviesList-item{
-  margin-bottom: 25px;
-  width: 29%;
+.MoviesList-item {
+  margin-bottom: 40px;
+  width: 29.8%;
+}
+
+@media screen and (max-width: 1024px) {
+  .MoviesList-item {
+    margin-bottom: 20px;
+    width: 100% !important;
+  }
+
+  .card {
+    min-height: 450px !important;
+  }
 }
